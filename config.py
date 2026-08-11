@@ -2,22 +2,21 @@
 # CONFIGURAÇÕES DO SIMR
 # ==========================================================
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # ----------------------------------------------------------
 # MikroTik
 # ----------------------------------------------------------
 
 MIKROTIK = {
-
-    "host": "192.168.0.1",
-
-    "porta": 8728,
-
-    "usuario": "admin",
-
-    "senha": "fiVN4BXA61"
-
+    "host": os.getenv("MIKROTIK_HOST"),
+    "porta": int(os.getenv("MIKROTIK_PORT", "8728")),
+    "usuario": os.getenv("MIKROTIK_USER"),
+    "senha": os.getenv("MIKROTIK_PASSWORD")
 }
-
 
 # ----------------------------------------------------------
 # Links de Internet
