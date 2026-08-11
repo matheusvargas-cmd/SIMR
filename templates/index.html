@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIMR</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-left">
+
+        <img
+            src="{{ url_for('static', filename='img/logo_header.png') }}"
+            class="logo"
+            alt="SIMR">
+
+        <div>
+
+            <h1>Sistema Integrado de Monitoramento da Rede</h1>
+
+            <p>Câmara Municipal de Muriaé</p>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <strong id="ultimaAtualizacao">
+
+            Última atualização: --
+
+        </strong>
+
+    </div>
+
+</header>
+
+
+<!-- ===================================================== -->
+<!-- RESUMO -->
+<!-- ===================================================== -->
+
+<section class="cards-resumo">
+
+    <div class="card-resumo">
+
+        <h3>🌐 Links</h3>
+
+        <span id="linksResumo">0/0</span>
+
+    </div>
+
+    <div class="card-resumo">
+
+        <h3>🖨 Impressoras</h3>
+
+        <span id="equipamentosResumo">0/0</span>
+
+    </div>
+
+    <div class="card-resumo">
+
+        <h3>⚙ CPU</h3>
+
+        <span id="cpuResumo">0%</span>
+
+    </div>
+
+    <div class="card-resumo">
+
+        <h3>🖥 MikroTik</h3>
+
+        <span id="routerResumo">ONLINE</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- MIKROTIK / LINKS -->
+<!-- ===================================================== -->
+
+<section class="painel">
+
+    <div class="card">
+
+        <h2>MikroTik</h2>
+
+        <div id="mikrotik"></div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>BrasilNET</h2>
+
+        <div id="brasilnet"></div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Imicro</h2>
+
+        <div id="imicro"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- REDE CABEADA + WIFI -->
+<!-- ===================================================== -->
+
+<section class="painel">
+
+    <div class="card">
+
+        <h2>🏢 Rede Cabeada</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Setor</th>
+
+                    <th>Status</th>
+
+                    <th>Velocidade</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaSetores">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📶 Wi-Fi</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Local</th>
+
+                    <th>Status</th>
+
+                    <th>Velocidade</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaWifi">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- IMPRESSORAS -->
+<!-- ===================================================== -->
+
+<section class="painel-impressoras">
+
+    <div class="card">
+
+        <h2>🖨 Impressoras</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Impressora</th>
+
+                    <th>Setor</th>
+
+                    <th>IP</th>
+
+                    <th>Status</th>
+
+                    <th>Velocidade</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaImpressoras">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+
+</html>

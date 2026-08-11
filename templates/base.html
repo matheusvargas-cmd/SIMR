@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIMR - Sistema de Monitoramento da Rede</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+    <div class="header-esquerda">
+
+        <img
+            src="{{ url_for('static', filename='img/logo_header.png') }}"
+            class="logo-header"
+            alt="SIMR">
+
+        <div class="titulo-header">
+
+            <div class="titulo-principal">
+                Sistema Integrado de Monitoramento da Rede
+            </div>
+
+            <div class="titulo-secundario">
+                Câmara Municipal de Muriaé
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-direita">
+
+        <div class="status-topo">
+
+            <span class="badge verde">
+
+                ● Tudo Operacional
+
+            </span>
+
+        </div>
+
+        <div id="ultimaAtualizacao">
+
+        </div>
+
+    </div>
+
+</header>
+
+    <main>
+
+        {% block conteudo %}
+
+        {% endblock %}
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+
+</html>
