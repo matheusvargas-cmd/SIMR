@@ -138,7 +138,7 @@ ACCESS_POINTS = [
 
         "tipo": "Access Point",
 
-        "monitor": "fetch"
+        "monitor": "ping"
 
     },
 
@@ -170,7 +170,7 @@ ACCESS_POINTS = [
 
         "tipo": "Access Point",
 
-        "monitor": "netwatch"
+        "monitor": "http"
 
     },
 
@@ -202,7 +202,7 @@ ACCESS_POINTS = [
 
         "tipo": "Acsses Point",
 
-        "monitor": "netwatch"
+        "monitor": "http"
 
     },
 
@@ -218,7 +218,7 @@ ACCESS_POINTS = [
 
         "tipo": "Acsses Point",
 
-        "monitor": "netwatch"
+        "monitor": "http"
 
     },
 
@@ -261,7 +261,7 @@ IMPRESSORAS = [
 
         "tipo": "Impressora",
 
-        "monitor": "netwatch"
+        "monitor": "http"
 
     },
 
@@ -279,7 +279,7 @@ IMPRESSORAS = [
 
         "tipo": "Impressora",
 
-        "monitor": "netwatch"
+        "monitor": "http"
 
     },
 

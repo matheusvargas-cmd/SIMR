@@ -61,6 +61,10 @@ def verificar_dispositivo(mk, dispositivo):
 
             resultado = mk.http_online(ip)
 
+        elif metodo == "fetch":
+
+            resultado = mk.fetch_routeros(f"http://{ip}")
+
         elif metodo == "router_ping":
 
             resultado = mk.ping_routeros(ip)

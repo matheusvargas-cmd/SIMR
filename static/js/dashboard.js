@@ -237,67 +237,9 @@ function atualizarResumo(dados){
 
 
 
-//==================================================
-// Dashboard
-//==================================================
-
-async function atualizarDashboard(){
-
-    try{
-
-        let resposta=await fetch("/api/dashboard",{
-
-            cache:"no-store"
-
-        });
-
-        let dados = await resposta.json();
-
-        console.log("Resposta da API:", dados);
-
-        if(!dados.sucesso){
-
-            console.error("Erro:", dados.erro);
-
-        return;
-
-        }
-
-        atualizarMikroTik(dados.mikrotik);
-
-        atualizarLinks(dados.links);
-
-        atualizarSetores(dados.setores);
-
-        atualizarWifi(dados.wifi);
-
-        atualizarImpressoras(dados.impressoras);
-
-        atualizarResumo(dados);
-
-        document.getElementById("ultimaAtualizacao").innerHTML=
-
-            "Última atualização: " +
-
-            dados.ultima_atualizacao;
-
-    }
-
-    catch(e){
-
-        console.log(e);
-
-    }
-
-}
 
 
 
-//==================================================
-// Controle de atualização
-//==================================================
-
-let atualizando = false;
 
 
 //==================================================
