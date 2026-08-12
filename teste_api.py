@@ -3,7 +3,7 @@ from routeros_api import RouterOsApiPool
 pool = RouterOsApiPool(
     host="192.168.0.1",
     username="admin",
-    password="fiVN4BXA61",
+    password="",
     port=8728,
     plaintext_login=True
 )
